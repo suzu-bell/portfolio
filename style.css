@@ -2,12 +2,12 @@
 
 * {
     box-sizing: border-box;
-    background-color: #f5f5f5;
 }
 
 body {
+    background-color: #f5f5f5;
     margin: 0;
-    font-family: 'Yu Mincho Light','YuMincho','Yu Mincho','游明朝体',sans-serif;;
+    font-family: 'Yu Mincho Light','YuMincho','Yu Mincho','游明朝体',sans-serif;
 }
 
 header {
@@ -15,9 +15,9 @@ header {
     justify-content: space-between;
 }
 
+
 .icon {
-    
-    padding: 50px 50px;
+    padding: 50px;
 }
 
 .header-right {
@@ -40,10 +40,11 @@ header {
     text-align: center;
 }
 
+
 .orca {
-    margin-bottom: 100px;
     max-height: 60%;
     max-width: 100%;
+    margin-bottom: 100px;
 }
 
 .work {
@@ -77,3 +78,49 @@ header {
     line-height: 50px;
     margin: 50px 0 0 0;
 }
+
+.fade-in {
+    opacity: 0;
+    visibility: hidden;
+    transition: all 1s;
+  }
+  
+.fade-in.is-show {
+    opacity: 1;
+    visibility: visible;
+  }
+
+
+  @media screen and (max-width: 480px){ 
+    header {
+        margin-top: 20px;
+    }
+
+    .icon {
+        padding: 20px;
+        height: 128px;
+    }
+
+    .text {
+        height: 30px;
+        padding: 5px 15px;
+    }
+
+    .small {
+        margin-right: 15px;
+    }
+
+    .home {
+        height: 400px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 100px;
+    }
+
+    .orca {
+        margin: 0;
+        width: 90%;
+    }
+
+  }

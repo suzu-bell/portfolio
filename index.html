@@ -4,6 +4,7 @@
         <meta charset="UTF-8">
         <title>Suzuyo Shimo's Portfolio</title>
         <link rel="stylesheet" href="style.css">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
     </head>
     <body>
         <header>
@@ -15,13 +16,10 @@
                 <a href="about/about.html"><img class="text small" src="image/about.png"></a>
                 <a href="about/about.html#contact"><img class="text" src="image/contact.png"></a>
             </div>
-
-
-
         </header>
         <div class="main">
             <div class="home">
-                <img class="orca" src="image/orca.png">
+                <img class="orca fade-in" src="image/orca.png">
             </div>
             <div id="Works">
                 <img class="work" src="image/works.png">
@@ -44,5 +42,17 @@
         <footer>
             <p class="footer">©️Suzuyo Shimo 2022</p>
         </footer>
+        <script>
+            function effect() {
+                var element = document.getElementsByClassName('fade-in');
+  
+                for(var i = 0; i < element.length; i++) { 
+                    element[i].classList.add('is-show');
+                }
+            }
+
+            setTimeout(effect, 300);
+
+        </script>
     </body>
 </html>

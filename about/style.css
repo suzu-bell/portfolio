@@ -81,3 +81,32 @@ p {
     line-height: 50px;
     margin: 0;
 }
+
+@media screen and (max-width: 480px){
+    .icon {
+        padding: 20px;
+        width: 100px;
+    }
+
+    header {
+        height: 100px;
+    }
+
+    .text {
+        max-width: 90%;
+        padding: 10px 10px 10px 30px;
+    }
+
+    #about {
+        margin-top: 20px;
+        padding: 10px 0;
+    }
+
+    h1 {
+        font-size: 35px;
+    }
+
+    .mail {
+        font-size: 20px;
+    }
+}
