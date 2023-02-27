@@ -13,31 +13,51 @@ header {
 }
 
 .icon {
-    padding: 50px 50px;
+    margin: 50px;
     position: absolute;
     left: 0;
+    width: 150px;
+    height: auto;
+    max-width: 100%;
+    min-width: 30px;
+    
 }
 
 body {
     font-family: 'Yu Mincho Light','YuMincho','Yu Mincho','游明朝体',sans-serif;
     margin: 0;
+
 }
 
-
-#work {
-    padding: 40px;
-    margin-top: 50px;
+.header-center a {
+    font-size: 64px;
+    font-size: clamp(35px,5vw, 64px);
+    height: 230px;
+    line-height: 230px;
+    margin: 0;
+    text-decoration: none;
 }
 
 .main {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    min-height: 90vh;
 }
 
 .main img {
     width: 400px;
     margin: 30px;
+}
+
+.i-biei {
+    max-height: 1000px;
+}
+.i-katano {
+    max-height: 875px;
+}
+.i-piano {
+    max-height: 300px;
 }
 
 .text {
@@ -52,22 +72,23 @@ body {
     text-align: center;
     height: 50px;
     line-height: 50px;
+    width: 100vw;
     margin: 0;
 }
 
 @media screen and (max-width: 480px){
     .icon {
-        padding: 20px;
-        width: 100px;
+        margin: 20px;
+        width: 60px;
     }
 
     header {
         height: 100px;
     }
 
-    #work {
-        margin-top: 20px;
-        padding: 10px 0;
+    .header-center a {
+        height: 100px;
+        line-height: 100px;
     }
 
     .main img {

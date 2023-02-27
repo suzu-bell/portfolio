@@ -5,24 +5,40 @@
         <title>Suzuyo Shimo's Portfolio</title>
         <link rel="stylesheet" href="style.css">
         <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     </head>
     <body>
-        <header>
-            <div class="header-left" id="top">
-                <a href="#top"><img class="icon" src="image/icon.png"></a>
-            </div>
-            <div class="header-right">
-                <a href="#Works"><img class="text small" src="image/works.png"></a>
-                <a href="about/about.html"><img class="text small" src="image/about.png"></a>
-                <a href="about/about.html#contact"><img class="text" src="image/contact.png"></a>
-            </div>
-        </header>
         <div class="main">
-            <div class="home">
-                <img class="orca fade-in" src="image/orca.png">
+            <div class="home fade-in">
+                <div class="header-left" id="top">
+                    <a href="#top"><img class="icon" src="image/icon.png"></a>
+                </div>
+                <img class="orca" src="image/orca.png">
+                <div id="menu" class="header-right">
+                    <ul>
+                        <li><a href="#Sample" class="text">Sample</a></li>
+                        <li><a href="#Works" class="text">Works</a></li>
+                        <li><a href="about/about.html" class="text">About</a></li>
+                        <li><a href="about/about.html#contact" class="text">Contact</a></li>
+                    </ul>   
+                </div>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
             </div>
-            <div id="Works">
-                <img class="work" src="image/works.png">
+            <nav class="globalMenuSp">
+                <ul>
+                    <li><a href="#Sample" class="text">Sample</a></li>
+                    <li><a href="#Works" class="text">Works</a></li>
+                    <li><a href="about/about.html" class="text">About</a></li>
+                    <li><a href="about/about.html#contact" class="text">Contact</a></li>
+                </ul>   
+            </nav>
+            <img class="orca2 fade-in" src="image/orca.png">
+            <div id="Sample">
+                <h1 class="sample">Sample</h1>
                 <div class="contents">
                     <div class="paino">
                         <a href="work/contents/piano-i.html"><img src="work/i-piano.png"></a>
@@ -38,9 +54,30 @@
                     </div>
                 </div>
             </div>
+            <div id="Works">
+                <h1 class="sample">Works</h1>
+                <div class="contents">
+                    <div class="c-s">
+                        <div class="soon"></div>
+                        <p>coming soon</p>
+                    </div>
+                    <div class="c-s">
+                        <div class="soon"></div>
+                        <p>coming soon</p>
+                    </div>
+                    <div class="c-s">
+                        <div class="soon"></div>
+                        <p>coming soon</p>
+                    </div>
+                    <div class="c-s">
+                        <div class="soon"></div>
+                        <p>coming soon</p>
+                    </div>
+                </div>
+            </div>
         </div>
         <footer>
-            <p class="footer">©️Suzuyo Shimo 2022</p>
+            <p class="footer">©️Suzuyo Shimo 2023</p>
         </footer>
         <script>
             function effect() {
@@ -53,6 +90,17 @@
 
             setTimeout(effect, 300);
 
+            $(function() {
+                $('.hamburger').click(function() {
+                    $(this).toggleClass('active');
+            
+                    if ($(this).hasClass('active')) {
+                        $('.globalMenuSp').addClass('active');
+                    } else {
+                        $('.globalMenuSp').removeClass('active');
+                    }
+                });
+            });
         </script>
     </body>
 </html>
